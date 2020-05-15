@@ -284,6 +284,8 @@ func TestUpdateDeployment(t *testing.T) {
 	foo := newFoo("test", int32Ptr(1))
 	d := newDeployment(foo)
 
+	fmt.Printf("something good:%#v",foo)
+	fmt.Printf("something bad happend:%+v",foo)
 	// Update replicas
 	foo.Spec.Replicas = int32Ptr(2)
 	expDeployment := newDeployment(foo)

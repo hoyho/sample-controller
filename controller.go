@@ -260,6 +260,7 @@ func (c *Controller) syncHandler(key string) error {
 
 		return err
 	}
+	fmt.Printf("foo is %+v",foo)
 
 	deploymentName := foo.Spec.DeploymentName
 	if deploymentName == "" {
